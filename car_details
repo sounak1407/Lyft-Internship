@@ -26,3 +26,8 @@ Nubbin Battery
 Thovex
 Capulet Engine
 Nubbin Battery
+
+
+# service_threshold_date = self.last_service_date.replace(year=self.last_service_date.year + 2)
+
+# service_threshold_date < datetime.today().date()

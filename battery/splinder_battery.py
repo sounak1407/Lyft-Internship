@@ -1,0 +1,47 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7ba079ef",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from abc import ABC\n",
+    "from car import Car\n",
+    "from datetime import datetime\n",
+    "\n",
+    "class SplinderBattery(Car,ABC):\n",
+    "    def __init__(self, last_service_date):\n",
+    "        super().__init__(last_service_date)\n",
+    "        self.current_date = datetime.today().date()\n",
+    "        self.service_threshold_date = self.last_service_date.replace(year=self.last_service_date.year + 2)\n",
+    "    \n",
+    "    def battery_should_be_serviced(self):\n",
+    "        return self.service_threshold_date < self.current_date\n",
+    "    "
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
