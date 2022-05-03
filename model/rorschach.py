@@ -1,5 +1,5 @@
 from engine.willoughby_engine import WilloughbyEngine
-from battery.nubbin_engine import NubbinBattery
+from battery.nubbin_battery import NubbinBattery
 
 class Rorschach(WilloughbyEngine, NubbinBattery):
     def needs_service(self):
