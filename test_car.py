@@ -7,6 +7,15 @@ from model.palindrome import Palindrome
 from model.rorschach import Rorschach
 from model.thovex import Thovex
 
+from car import Car
+
+from model.engine.capulet_engine import CapuletEngine
+from model.engine.sternman_engine import SternmanEngine
+from model.engine.willoughby_engine import WilloughbyEngine
+
+from model.battery.nubbin_battery import NubbinBattery
+from model.battery.splinder_battery import SplinderBattery
+
 
 class TestCalliope(unittest.TestCase):
     def test_battery_should_be_serviced(self):
